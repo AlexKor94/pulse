@@ -20,3 +20,8 @@
 @import 'blocks/footer';
 @import 'blocks/modal';
 @import 'blocks/pageup';
+
+// media rules always fater general css
+@import 'media/promo_media';
+@import 'media/buttons_media';
+@import 'media/promo_advantages';

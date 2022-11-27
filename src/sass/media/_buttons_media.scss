@@ -1,0 +1,16 @@
+@media (max-width: 575px) {
+  .button {
+    margin: 10px;
+    font-size: 10px;
+    width: 130px;
+    height: 24px;
+    &_header {
+      margin-top: 5px;
+    }
+    &_main{
+      width: 160px;
+      height: 33px;
+    }
+  }
+  
+}
