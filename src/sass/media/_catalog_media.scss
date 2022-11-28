@@ -1,0 +1,17 @@
+@media (max-width: 575px) { 
+  .catalog {
+    padding-bottom: 50px;
+    .title {
+      margin-top: 20px;
+      font-size: 20px;
+    }
+    &__tabs {
+      margin-top: 40px;
+    }
+    &__tab {
+      width: 120px;
+      height: 20px;
+      font-size: 10px;
+    }
+  }
+}

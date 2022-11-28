@@ -9,7 +9,9 @@ $(document).ready(function () {
                 breakpoint: 992,
                 settings: {
                     dots: true,
-                    arrows: false
+                    arrows: false,
+                    autoplay: true,
+                    adaptiveHeight: false,
                 }
             }
         ]
@@ -103,9 +105,9 @@ $(document).ready(function () {
 
     //Send form
 
-    $('form').submit(function(e) {
+    $('form').submit(function (e) {
         e.preventDefault();
-        if(!$(this).valid()){
+        if (!$(this).valid()) {
             return;
         }
         $('#consultation, #order').fadeOut();

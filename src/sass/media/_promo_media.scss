@@ -25,7 +25,7 @@
       }
     }
     &__wrapper {
-      margin: 0 5px;
+      margin: 0 10px;
     }
     &__header {
       font-size: 23px;
@@ -37,6 +37,9 @@
     }
     &__icons {
       width: 100%;
+    }
+    &__link {
+      margin-right: 10px;
     }
   }
 }
