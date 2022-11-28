@@ -88,10 +88,13 @@ $(document).ready(function () {
     // Smooth scroll and pageup
 
     $(window).scroll(function () {
-        if ($(this).scrollTop() > 1600) {
-            $('.pageup').fadeIn();
-        } else {
-            $('.pageup').fadeOut();
+        let width = $(window).width();
+        if (width > 775) {
+            if ($(this).scrollTop() > 1600) {
+                $('.pageup').fadeIn();
+            } else {
+                $('.pageup').fadeOut();
+            }
         }
     });
 
