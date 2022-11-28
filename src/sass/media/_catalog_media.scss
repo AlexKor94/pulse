@@ -9,9 +9,23 @@
       margin-top: 40px;
     }
     &__tab {
-      width: 120px;
-      height: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 88px;
+      height: 40px;
       font-size: 10px;
+      line-height: 15px;
+      & > div {
+        width: 60px;
+      }
+    }
+    &__content {
+      margin-top: 35px;
+      justify-content: center;
+    }
+    &-item_img {
+      height: 150px;
     }
   }
 }
