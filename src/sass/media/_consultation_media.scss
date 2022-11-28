@@ -1,3 +1,21 @@
+@media (max-width: 767px) {
+  .consultation {
+    padding: 50px 0 30px 0;
+    min-height: 100%;
+    .title {
+      padding-right: 15%;
+      font-size: 25px;
+    }
+    &__descr {
+      padding-left: 5%;
+      font-size: 16px;
+    }
+    .feed-form {
+      margin: 16px auto;
+    }
+  }
+}
+
 @media (max-width: 575px) {
   .consultation {
     min-height: 400px;
