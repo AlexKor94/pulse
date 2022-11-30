@@ -18,15 +18,16 @@
 
 @media (max-width: 575px) {
   .consultation {
-    min-height: 400px;
-    padding: 50px 0 30px 10px;
-    &__descr {
-        font-size: 11px;
+      min-height: 400px;
+      padding: 50px 0 30px 0;
+      &__descr {
+          font-size: 11px;
+        }
+    .title {
+      &_left {
+        margin-left: 5%;
+        font-size: 13px;
       }
-  }
-  .title {
-    &_left {
-      font-size: 13px;
     }
   }
 }
