@@ -1,3 +1,35 @@
+@media (max-width: 767px) {
+  .catalog {
+    .title {
+      font-size: 20px;
+    }
+    &__content {
+      justify-content: space-around;
+    }
+    &__tabs {
+      margin-top: 40px;
+    }
+    &__tab {
+      height: 40px;
+      line-height: 40px;
+      font-size: 14px;
+      width: 160px;
+    }
+    &-item {
+      width: 270px;
+      &__img {
+        height: 100px;
+      }
+      &__subtitle {
+        font-size: 14px;
+      }
+      &__descr {
+        font-size: 12px;
+      }
+    }
+  }
+}
+
 @media (max-width: 575px) { 
   .catalog {
     padding-bottom: 30px;
