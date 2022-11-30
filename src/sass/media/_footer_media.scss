@@ -1,26 +1,42 @@
-@media (max-width: 575px) { 
-  .footer {
+@media (max-width: 767px) {
+.footer {
     height: 600px;
+
     &__info {
-      width: 100%;
+      width: 50%;
+      height: 45%;
     }
-    &__adr {
+
+    &__addr {
       margin-bottom: 20px;
       font-size: 15px;
 
     }
+
     &__phone {
       font-size: 15px;
     }
+
     &__social {
       justify-content: space-between;
-      &-item{
+
+      &-item {
         margin: 0;
-      }    
+      }
     }
   }
 
   #pageup {
     display: none;
   }
+} 
+
+@media (max-width: 575px) { 
+  .footer {
+    height: 600px;
+    &__info {
+      width: 100%;
+    }
+  }
+
 }
