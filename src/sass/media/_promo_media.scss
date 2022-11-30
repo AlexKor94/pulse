@@ -1,12 +1,32 @@
-@media (max-width: 767px) { 
-  .promo {
+@media (max-width: 1200px) {
+.promo {
     padding: 21px 0 40px 0;
+
     .header {
-      justify-content: space-around;
+      justify-content: space-between;
     }
+
     &__wrapper {
       margin-top: 60px;
       margin-right: 20px;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+.promo {
+    .header {
+      justify-content: space-around;
+    }
+  }
+}
+
+@media (max-width: 767px) { 
+.promo {
+    .header {
+      &__phone, &__official span{
+        font-size: 14px;
+      }
     }
   }
 }
