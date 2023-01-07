@@ -1,3 +1,38 @@
+@media (max-width: 767px) {
+  .hamburger {
+    display: block;
+    position: fixed;
+    right: 10px;
+    top: 10%;
+    // transform: translateY(-50%);
+    width: 26px;
+    height: 12px;
+    span{
+      display: block;
+      height: 2px;
+      width: 100%;
+      background-color: $main-color;
+      margin-bottom: 2px;
+      transition: 0.5s all;
+    }
+    &_active {
+      span {
+        margin-bottom: -2px;
+        &:nth-child(1){
+          transform: translateY(3px) rotate(-45deg);
+        }
+        &:nth-child(2) {
+          display: none;
+        }
+        &:nth-child(3) 
+        {
+          transform: translateY(3px) rotate(45deg);
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 575px) {
   .button {
     margin: 10px;
