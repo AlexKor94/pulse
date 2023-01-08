@@ -114,9 +114,15 @@ $(document).ready(function () {
             return;
         }
 
-        const formData = new FormData(e.target);
-        const json = JSON.stringify(Object.fromEntries(formData.entries()));
-        postData("https://script.google.com/macros/s/AKfycbxq3-Ufz-alnwWLHnwephaUzVxSFRk8NOnHPo5vLi1rgT5ipzY-TFs69XcnzYft9HG8/exec", json);
+        // const formData = new FormData(e.target);
+        // const json = JSON.stringify(Object.fromEntries(formData.entries()));
+
+        $.ajax({
+            type: "POST",
+            url: 'config.php',
+            data: $(this).serialize()
+        });
+
         $('#consultation, #order').fadeOut();
         $('.overlay, #thanks').fadeIn('slow');
         $('form').trigger('reset');
@@ -124,11 +130,3 @@ $(document).ready(function () {
     });
 
 });
-
-function postData(url, data) {
-    $.post(url,
-        data,
-        function (data, status) {
-            console.log('res');
-        });
-}
