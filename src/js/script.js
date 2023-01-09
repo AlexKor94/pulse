@@ -114,9 +114,6 @@ $(document).ready(function () {
             return;
         }
 
-        // const formData = new FormData(e.target);
-        // const json = JSON.stringify(Object.fromEntries(formData.entries()));
-
         $.ajax({
             type: "POST",
             url: 'config.php',
@@ -127,6 +124,32 @@ $(document).ready(function () {
         $('.overlay, #thanks').fadeIn('slow');
         $('form').trigger('reset');
         return false;
+    });
+    // Work with hamburger and mobile menu
+    $('.hamburger').click(function () {
+        $('.hamburger').toggleClass('hamburger_active');
+        $('.menu').toggleClass('menu_active');
+    });
+
+    $('.menu_item').each(function (i) {
+        $(this).on('click', function () {
+            $('.hamburger').toggleClass('hamburger_active');
+            $('.menu').toggleClass('menu_active');
+        });
+    });
+
+    jQuery(document).ready(function ($) {
+        $('a[href^="#"]').bind('click.smoothscroll', function (e) {
+            e.preventDefault();
+            var target = this.hash,
+                $target = $(target);
+
+            $('html, body').stop().animate({
+                'scrollTop': $target.offset().top - 40
+            }, 900, 'swing', function () {
+                window.location.hash = target;
+            });
+        });
     });
 
 });

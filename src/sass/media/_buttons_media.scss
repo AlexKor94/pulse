@@ -1,10 +1,10 @@
 @media (max-width: 767px) {
   .hamburger {
     display: block;
+    z-index: 3;
     position: fixed;
     right: 10px;
     top: 10%;
-    // transform: translateY(-50%);
     width: 26px;
     height: 12px;
     span{
