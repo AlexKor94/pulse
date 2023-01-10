@@ -13,6 +13,9 @@
 /vendor
 
 .credentials.json
+.gulpfile.js
+.composer.json
+.composer.lock
 
 # misc
 .DS_Store
