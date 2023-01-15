@@ -40,15 +40,22 @@ $(document).ready(function () {
 
     $('[data-modal=consultation]').on('click', function () {
         $('.overlay, #consultation').fadeIn('slow');
+        $('.pageup').fadeOut();
+        $('.hamburger').fadeOut();
     });
-    $('.overlay, .modal__close').on('click', function () {
-        $('.overlay, #consultation, #thanks, #order').fadeOut('slow');
+    $('.overlay, .modal__close').on('click', function (e) {
+        if (e.target.className == 'modal__close' || e.target.className == 'overlay') {
+            $('.overlay, #consultation, #thanks, #order').fadeOut('slow');
+            $('.hamburger').fadeIn('slow');
+        }
     });
 
     $('.button_mini').each(function (i) {
         $(this).on('click', function () {
             $('#order .modal__descr').text($('.catalog-item__subtitle').eq(i).text());
             $('.overlay, #order').fadeIn('slow');
+            $('.pageup').fadeOut();
+            $('.hamburger').fadeOut();
         });
     });
 
@@ -139,6 +146,7 @@ $(document).ready(function () {
             $('.overlay, #thanks').fadeOut('slow');
         }, 2000);
         $('form').trigger('reset');
+        $('.hamburger').fadeIn('slow');
         return false;
     });
     // Work with hamburger and mobile menu
