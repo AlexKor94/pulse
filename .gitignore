@@ -11,7 +11,7 @@
 /build
 
 /vendor
-
+/credentials
 .credentials.json
 .gulpfile.js
 .composer.json

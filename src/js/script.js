@@ -41,7 +41,7 @@ $(document).ready(function () {
     $('[data-modal=consultation]').on('click', function () {
         $('.overlay, #consultation').fadeIn('slow');
     });
-    $('.modal__close').on('click', function () {
+    $('.overlay, .modal__close').on('click', function () {
         $('.overlay, #consultation, #thanks, #order').fadeOut('slow');
     });
 
@@ -89,7 +89,20 @@ $(document).ready(function () {
 
     $(window).scroll(function () {
         let width = $(window).width();
-        if (width > 775) {
+
+        if (width > 300 && width < 775) {
+            if ($(this).scrollTop() > 270) {
+                $('.pageup').fadeIn();
+            } else {
+                $('.pageup').fadeOut();
+            }
+        } else if (width > 775 && width < 1200) {
+            if ($(this).scrollTop() > 1000) {
+                $('.pageup').fadeIn();
+            } else {
+                $('.pageup').fadeOut();
+            }
+        } else {
             if ($(this).scrollTop() > 1600) {
                 $('.pageup').fadeIn();
             } else {
@@ -122,6 +135,9 @@ $(document).ready(function () {
 
         $('#consultation, #order').fadeOut();
         $('.overlay, #thanks').fadeIn('slow');
+        setTimeout(function () {
+            $('.overlay, #thanks').fadeOut('slow');
+        }, 2000);
         $('form').trigger('reset');
         return false;
     });
